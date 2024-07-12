@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Diabetes Prediction using SVM</h1>
+        <div class="data-section">
+            <h2>Dataset Overview</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pregnancies</th>
+                        <th>Glucose</th>
+                        <th>BloodPressure</th>
+                        <th>SkinThickness</th>
+                        <th>Insulin</th>
+                        <th>BMI</th>
+                        <th>DiabetesPedigreeFunction</th>
+                        <th>Age</th>
+                        <th>Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>6</td>
+                        <td>148</td>
+                        <td>72</td>
+                        <td>35</td>
+                        <td>0</td>
+                        <td>33.6</td>
+                        <td>0.627</td>
+                        <td>50</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>85</td>
+                        <td>66</td>
+                        <td>29</td>
+                        <td>0</td>
+                        <td>26.6</td>
+                        <td>0.351</td>
+                        <td>31</td>
+                        <td>0</td>
+                    </tr>
+                    <!-- Add more rows as necessary -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="form-section">
+            <h2>Make a Prediction</h2>
+            <form id="prediction-form">
+                <label for="pregnancies">Pregnancies:</label>
+                <input type="number" id="pregnancies" name="pregnancies" required>
+
+                <label for="glucose">Glucose:</label>
+                <input type="number" id="glucose" name="glucose" required>
+
+                <label for="bloodpressure">Blood Pressure:</label>
+                <input type="number" id="bloodpressure" name="bloodpressure" required>
+
+                <label for="skinthickness">Skin Thickness:</label>
+                <input type="number" id="skinthickness" name="skinthickness" required>
+
+                <label for="insulin">Insulin:</label>
+                <input type="number" id="insulin" name="insulin" required>
+
+                <label for="bmi">BMI:</label>
+                <input type="number" step="0.1" id="bmi" name="bmi" required>
+
+                <label for="dpf">Diabetes Pedigree Function:</label>
+                <input type="number" step="0.001" id="dpf" name="dpf" required>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+
+                <button type="submit">Predict</button>
+            </form>
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
